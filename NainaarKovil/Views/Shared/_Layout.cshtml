@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body>
+    <style type="text/css">
+        .masthead, .page-section, .footer {
+            margin-right: -33px !important;
+        }
+
+        .navbar-nav li:hover > ul.dropdown-menu {
+            display: block; 
+        }
+
+        .dropdown-submenu {
+            position: relative;
+        }
+
+            .dropdown-submenu > .dropdown-menu {
+                top: 0;
+                left: 100%;
+                margin-top: -6px;
+            }
+
+        /* rotate caret on hover */
+        .dropdown-menu > li > a:hover:after {
+            text-decoration: underline;
+            transform: rotate(-90deg);
+        }
+
+        .myclass:hover {
+            color: #1abc9c !important;
+        }
+
+        .menufont {
+            font-size: 20px !important;
+        }
+
+            .menufont:hover {
+                background-color: white !important;
+                border-radius: 8px !important;
+            }
+
+        .ml-lg-1, .mx-lg-1 {
+            margin-left: 1.25rem !important;
+        }
+    </style>
+
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav" style="border-radius:0px !important;">
+        <div class="row" style="margin-top:-15px !important;">
+            <div class="col-md-12">
+                <div class="col-md-6" style="margin-left:-41px;">
+                    <div class="col-md-6">
+                        <a class="js-scroll-trigger" href="#page-top"><img style="width:125px !important;height:107px !important;" id="brandlogo" src="~/Images/linga.jpg" alt=""></a>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="~/Images/headerbanner.PNG" style="height:106px !important;margin-left: -218px !important;width: 1481px;"/>
+                    </div>
+                </div>
+
+                <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
+                <br />
+                <div class="col-md-9" id="navbarResponsive" style="margin-top:5px;margin-left:343px !important;">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1 menufont">
+                            @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" })
+                        </li>
+                        <li class="nav-item dropdown mx-0 mx-lg-1 menufont">
+                            @Html.ActionLink("About", "About", "Home", null, new { @class = "nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" })
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="font-size:14px;">
+                                <li>
+                                    @Html.ActionLink("Temple Introduction", "About", "Home", null, new { @class = "nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" })
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Details & Worships", "Worshipdetails", "Home", null, new { @class = "nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" })
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Beleifs", "Beliefs", "Home", null, new { @class = "nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" })
+                                </li>
+                                <li>
+                                    @Html.ActionLink("History & Nomenclature", "History", "Home", null, new { @class = "nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" })
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Holy wells", "HollyWells", "Home", null, new { @class = "nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" })
+                                </li>
+                                @*<li class="dropdown-submenu menufont">
+                    <a class="dropdown-item dropdown-toggle" href="http://google.com">Google</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Submenu</a></li>
+                        <li><a class="dropdown-item" href="#">Submenu0</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Submenu 1</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Subsubmenu1</a></li>
+                                <li><a class="dropdown-item" href="#">Subsubmenu1</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Submenu 2</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Subsubmenu2</a></li>
+                                <li><a class="dropdown-item" href="#">Subsubmenu2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>*@
+                            </ul>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1 menufont">
+                            @Html.ActionLink("Travel", "Contact", "Home", null, new { @class = "nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" })
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1 myclass menufont" style="color:white;cursor:pointer;margin-left:4px;padding-left:7px;">
+                            @Html.ActionLink("Festivals", "Festives", "Home", null, new { @class = "nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" })
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1 myclass menufont" style="color:white;cursor:pointer;margin-left:4px;padding-left:7px;">
+                            @Html.ActionLink("Dharshan Timings", "Timings", "Home", null, new { @class = "nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" })
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1 myclass menufont" style="color:white;cursor:pointer;margin-left:4px;padding-left:7px;">
+                            @Html.ActionLink("Tender", "Tender", "Home", null, new { @class = "nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" })
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1 myclass menufont" style="color:white;cursor:pointer;margin-left:4px;padding-left:7px;">
+                            @Html.ActionLink("Admin", "Admin", "Home", null, new { @class = "nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" })
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1 myclass menufont" style="color:white;cursor:pointer;margin-left:4px;padding-left:7px;">
+                            @Html.ActionLink("Near by Temples", "NearbyTemples", "Home", null, new { @class = "nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" })
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content" style="max-width: 1685px !important;margin-left: -17px !important;margin-right: -15px !important;">
+        @RenderBody()
+        <hr />
+        <footer class="copyright py-4 text-center text-white" style="margin-right:-33px !important;margin-top:-18px !important; background-color:#2c3e50 !important;font-size:18px;">
+            <p> Site Created and Maintained by  &copy; @DateTime.Now.Year - <span style="text-decoration:underline !important;"><strong>  Ariya Safe Angle Private Limited </strong> </span><a class="js-scroll-trigger" href="#page-top"><img id="brandImage" src="~/Images/Logo.PNG" alt=""></a></p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
